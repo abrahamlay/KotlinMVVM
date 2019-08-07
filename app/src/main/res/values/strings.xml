@@ -4,8 +4,8 @@
     <string name="multiply">Multiply</string>
     <string name="prime_number">Prime Number</string>
     <string name="fibonacci_number">Fibonacci Number</string>
-    <string name="input_1">Input 1</string>
-    <string name="input_2">Input 2</string>
+    <string name="input_1">First value</string>
+    <string name="input_2">Second value</string>
     <string name="fibonacci_function">Fibonacci Function</string>
     <string name="add_function">Add Function</string>
     <string name="prime_function">Prime Function</string>

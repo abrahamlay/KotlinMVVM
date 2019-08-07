@@ -31,22 +31,6 @@ class PrimeFragment : CalculateFragment() {
         et_input_2.visibility = View.GONE
     }
 
-    private fun updateUI(screenState: ScreenState<CalculateState>?) {
-        when (screenState) {
-            ScreenState.Loading -> progressBar.visibility = View.VISIBLE
-            is ScreenState.Render -> calculatingState(screenState.renderState)
-        }
-    }
-
-    private fun calculatingState(calculateState: CalculateState) {
-        progressBar.visibility = View.GONE
-        when (calculateState) {
-            is CalculateState.SuccessCalculate -> tv_result.text = calculateState.result
-            is CalculateState.Input1Empty -> et_input_1.error = getString(R.string.input_1_empty)
-            is CalculateState.Input2Empty -> et_input_2.error = getString(R.string.input_2_empty)
-        }
-    }
-
     override fun calculate() {
         viewModel.onSubmitClicked(et_input_1.text.toString())
     }
