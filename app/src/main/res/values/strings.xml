@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Kotlin MVVM</string>
+    <string name="add">Add</string>
+    <string name="multiply">Multiply</string>
+    <string name="prime">Prime</string>
+    <string name="fibonacci">Fibonacci</string>
+</resources>
