@@ -37,7 +37,6 @@ abstract class BaseTabFragment : BaseFragment() {
         if (isAdded) {
             adapter = TabAdapter(fragments, titles, childFragmentManager)
             pager.adapter = adapter
-            tab.setupWithViewPager(pager)
             pager.offscreenPageLimit = fragments.size
         }
     }
