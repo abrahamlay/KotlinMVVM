@@ -1,4 +1,4 @@
-package com.abrahamlay.kotlinmvvm.util.base
+package com.abrahamlay.kotlinmvvm.base
 
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity

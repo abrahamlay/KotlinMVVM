@@ -1,4 +1,4 @@
-package com.abrahamlay.kotlinmvvm.prime
+package com.abrahamlay.kotlinmvvm.add
 
 import android.view.View
 import androidx.lifecycle.ViewModelProviders
@@ -11,24 +11,22 @@ import kotlinx.android.synthetic.main.fragment_calculate.*
 /**
  * Created by Abraham Lay on 2019-08-07.
  */
-class PrimeFragment : CalculateFragment() {
+class AddFunctionFragment : CalculateFragment() {
 
-    private lateinit var viewModel: PrimeFunctionViewModel
+    private lateinit var viewModel: AddFunctionViewModel
 
     override fun initialization() {
 
         viewModel = ViewModelProviders.of(
             this,
-            PrimeFunctionViewModel.Factory(PrimeFunctionInteractor())
-        )[PrimeFunctionViewModel::class.java]
+            AddFunctionViewModel.Factory(AddFunctionInteractor())
+        )[AddFunctionViewModel::class.java]
 
         viewModel.calculateState.observe(::getLifecycle, ::updateUI)
 
-        tv_title.text = getString(R.string.prime_function)
+        tv_title.text = getString(R.string.add_function)
 
-        btn_submit.text = getString(R.string.prime_number)
-
-        et_input_2.visibility = View.GONE
+        btn_submit.text = getString(R.string.add)
     }
 
     private fun updateUI(screenState: ScreenState<CalculateState>?) {
@@ -48,7 +46,7 @@ class PrimeFragment : CalculateFragment() {
     }
 
     override fun calculate() {
-        viewModel.onSubmitClicked(et_input_1.text.toString())
+        viewModel.onSubmitClicked(et_input_1.text.toString(), et_input_2.text.toString())
     }
 
 }

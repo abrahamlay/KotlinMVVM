@@ -1,4 +1,4 @@
-package com.abrahamlay.kotlinmvvm.util.base
+package com.abrahamlay.kotlinmvvm.base
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

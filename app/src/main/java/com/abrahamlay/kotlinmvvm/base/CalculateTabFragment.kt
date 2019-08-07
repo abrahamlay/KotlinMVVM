@@ -1,4 +1,4 @@
-package com.abrahamlay.kotlinmvvm.util.base
+package com.abrahamlay.kotlinmvvm.base
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,7 +12,7 @@ import java.util.ArrayList
 /**
  * Created by Abraham Lay on 2019-08-07.
  */
-abstract class BaseTabFragment : BaseFragment() {
+abstract class CalculateTabFragment : Fragment() {
 
 
     private var adapter: TabAdapter? = null
